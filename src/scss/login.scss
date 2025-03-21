@@ -1,0 +1,151 @@
+// Fonts from Google Fonts, imported via Download
+@font-face {
+    font-family: "Pacifico";
+    src: url("../assets/fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+
+// Mixin to center components using Flex
+@mixin centerComponents() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Body
+body {
+    width: 100vw;
+    height: 100vh;
+    @include centerComponents();
+    
+    background-image: url("../assets/images/Background.png");
+    background-size: 50vw;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+
+// Login Banner
+.login {
+    @include centerComponents();
+    justify-content: space-between;
+    flex-direction: row;
+    
+    
+    background-color: #3C3835;
+    padding: 1rem;
+    border-radius: 0.4rem;
+
+    height: fit-content;
+    width: fit-content;
+}
+
+// Side Image
+.imagecontainer {
+    width: 30%;
+}
+
+#image1 {
+    width: 100%;
+    height: 100;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+// Title Text, Inputs, and Buttons
+.group1 {
+    @include centerComponents();
+    flex-direction: column;
+
+    width: 65%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    font-weight: 100;
+    font-size: 54px;
+    color: #FFF7EF;
+}
+
+input {
+    width: 100%;
+
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    color: #FFF7EF;
+
+    border: none;
+    outline: none ;
+    padding: 0.5rem;
+    background-color: #534F4C;
+}
+
+.inputs {
+    @include centerComponents();
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 77.5%;
+}
+
+.buttons {
+    @include centerComponents();
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 80%;
+}
+
+#login {
+    width: 100%;
+    
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFF7EF;
+
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: #897666;
+}
+
+#forgotpassword {
+    width: 100%;
+
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    text-decoration: underline;
+    color: #FFF7EF;
+
+    border: none;
+    outline: none;
+    padding: 0rem;
+    background-color: #3C3835;
+}
+
+#createaccount {
+    width: 100%;
+
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFF7EF;
+
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: #E49F43;
+}
