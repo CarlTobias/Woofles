@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Pacifico";
-  src: url("../assets/fonts/Pacifico-Regular.ttf");
+  src: url("/assets/fonts/Pacifico-Regular.ttf");
 }
 @font-face {
   font-family: "Poppins-Regular";
-  src: url("../assets/fonts/Poppins-Regular.ttf");
+  src: url("/assets/fonts/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: "Poppins-Bold";
-  src: url("../assets/fonts/Poppins-Bold.ttf");
+  src: url("/assets/fonts/Poppins-Bold.ttf");
 }
 body {
   display: flex;
@@ -16,13 +16,13 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../assets/images/Background.png");
+  background-image: url("/assets/images/Background.png");
   background-size: 30vw;
   background-repeat: repeat;
   overflow: hidden;
 }
 
-.login {
+.signup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,6 @@ body {
   padding: 1rem;
   border-radius: 0.4rem;
   width: 55vw;
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -63,6 +62,10 @@ h1 {
   color: #FFF7EF;
 }
 
+form {
+  width: 100%;
+}
+
 input {
   width: 100%;
   font-family: "Poppins-Regular";
@@ -85,6 +88,11 @@ input {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 button {
   display: flex;
   justify-content: center;
@@ -99,7 +107,7 @@ button {
   padding-top: 0.5rem;
 }
 
-#login {
+#signup {
   width: 100%;
   font-family: "Poppins-Regular";
   font-size: 20px;
@@ -111,29 +119,4 @@ button {
   background-color: #897666;
 }
 
-#forgotpassword {
-  width: 100%;
-  font-family: "Poppins-Regular";
-  font-size: 14px;
-  text-decoration: underline;
-  color: #FFF7EF;
-  border: none;
-  outline: none;
-  padding: 0rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  background-color: #3C3835;
-}
-
-#createaccount {
-  width: 100%;
-  font-family: "Poppins-Regular";
-  font-size: 20px;
-  font-weight: 700;
-  color: #FFF7EF;
-  border: none;
-  outline: none;
-  padding: 0.5rem;
-  margin-top: 3.5rem;
-  background-color: #E49F43;
-}/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=signup.css.map */

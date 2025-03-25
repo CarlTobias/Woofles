@@ -34,7 +34,7 @@ body {
     @include centerComponents();
     width: 100vw;
     height: 100vh;
-    
+
     background-image: url("/assets/images/Background.png");
     background-size: 30vw;
     background-repeat: repeat;
@@ -42,13 +42,13 @@ body {
 }
 
 
-// Login Banner
-.login {
+// Sign Up Banner
+.signup {
     @include centerComponents();
     flex-direction: row;
     gap: 1rem;
-    
-    
+
+
     background-color: #3C3835;
     padding: 1rem;
     border-radius: 0.4rem;
@@ -98,7 +98,7 @@ input {
     color: #FFF7EF;
 
     border: none;
-    outline: none ;
+    outline: none;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0;
@@ -131,9 +131,9 @@ button {
     padding-top: 0.5rem;
 }
 
-#login {
+#signup {
     width: 100%;
-    
+
     font-family: 'Poppins-Regular';
     font-size: 20px;
     font-weight: 700;
@@ -143,35 +143,4 @@ button {
     outline: none;
     padding: 0.5rem;
     background-color: #897666;
-}
-
-#forgotpassword {
-    width: 100%;
-
-    font-family: 'Poppins-Regular';
-    font-size: 14px;
-    text-decoration: underline;
-    color: #FFF7EF;
-
-    border: none;
-    outline: none;
-    padding: 0rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: #3C3835;
-}
-
-#createaccount {
-    width: 100%;
-
-    font-family: 'Poppins-Regular';
-    font-size: 20px;
-    font-weight: 700;
-    color: #FFF7EF;
-
-    border: none;
-    outline: none;
-    padding: 0.5rem;
-    margin-top: 3.5rem;
-    background-color: #E49F43;
 }
