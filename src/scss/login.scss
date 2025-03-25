@@ -22,15 +22,21 @@
     align-items: center;
 }
 
+@mixin mediaQuery($minWidth, $maxWidth) {
+    @media screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        @content;
+    }
+}
+
 
 // Body
 body {
+    @include centerComponents();
     width: 100vw;
     height: 100vh;
-    @include centerComponents();
     
     background-image: url("../assets/images/Background.png");
-    background-size: 50vw;
+    background-size: 30vw;
     background-repeat: repeat;
     overflow: hidden;
 }
@@ -39,27 +45,27 @@ body {
 // Login Banner
 .login {
     @include centerComponents();
-    justify-content: space-between;
     flex-direction: row;
+    gap: 1rem;
     
     
     background-color: #3C3835;
     padding: 1rem;
     border-radius: 0.4rem;
 
+    width: 55vw;
     height: fit-content;
-    width: fit-content;
 }
 
 // Side Image
 .imagecontainer {
-    width: 30%;
+    width: auto;
 }
 
 #image1 {
+    display: block;
     width: 100%;
-    height: 100;
-    object-fit: cover;
+    height: 55vh;
     border-radius: 0.3rem;
 }
 
@@ -68,14 +74,15 @@ body {
     @include centerComponents();
     flex-direction: column;
 
-    width: 65%;
+    width: 51%;
     height: 100%;
+
 }
 
 h1 {
     font-family: 'Pacifico';
     font-weight: 100;
-    font-size: 54px;
+    font-size: 60px;
     color: #FFF7EF;
 }
 
@@ -88,7 +95,9 @@ input {
 
     border: none;
     outline: none ;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
     background-color: #534F4C;
 }
 
@@ -97,15 +106,20 @@ input {
     flex-direction: column;
     gap: 1rem;
 
-    width: 77.5%;
+    width: 100%;
 }
 
-.buttons {
+button {
     @include centerComponents();
     flex-direction: column;
     gap: 1rem;
+}
 
-    width: 80%;
+.buttons {
+    width: 100%;
+    max-width: 100%;
+
+    padding-top: 0.5rem;
 }
 
 #login {
@@ -133,6 +147,8 @@ input {
     border: none;
     outline: none;
     padding: 0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     background-color: #3C3835;
 }
 
@@ -147,5 +163,6 @@ input {
     border: none;
     outline: none;
     padding: 0.5rem;
+    margin-top: 3.5rem;
     background-color: #E49F43;
 }
