@@ -10,6 +10,9 @@
     </head>
 
     <body>
+        <% if (messages.error) { %>
+            <% messages.error %>
+        <% } %>
         <div class="login">
             <div class="imagecontainer">
                 <img id="image1" src="/assets/images/doghouse.png" alt="doghouse.jpg">
