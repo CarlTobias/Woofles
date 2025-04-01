@@ -1,0 +1,233 @@
+// Fonts from Google Fonts, imported via Download
+@font-face {
+    font-family: "Pacifico";
+    // src: url("/assets/fonts/Pacifico-Regular.ttf"); (for .ejs)
+    src: url("../assets/fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    // src: url("/assets/fonts/Poppins-Regular.ttf"); (for .ejs)
+    src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    // src: url("/assets/fonts/Poppins-Bold.ttf"); (for .ejs)
+    src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+
+// Mixin to center components using Flex
+@mixin centerComponents() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// Body
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7EF;
+}
+
+
+// Header Bar Section
+.headerBar {
+    @include centerComponents();
+    justify-content: space-between;
+    height: 5vh;
+
+    padding: 0.6rem;
+    background-color: #3C3835;
+}
+
+.logoContainer {
+    width: auto;
+}
+
+#logo {
+    width: 100%;
+    height: 3vh;
+}
+
+.dropdown {
+    all: unset;
+    @include centerComponents();
+}
+
+.fa-bars {
+    font-size: 3vh;
+    text-align: center;
+    color: #FFF7EF;
+}
+
+.menu {
+    display: none;
+
+    position: absolute;
+    right: 0.55rem;
+    
+    padding: 0.8rem 1rem 0.4rem 1rem;
+    border-radius: 0.3rem;
+    background-color: #534F4C;
+    box-shadow: 4px 3px 5px hsla(0, 0%, 0%, 0.8);
+}
+
+.menu.show {
+    display: block;
+}
+
+a {
+    width: 5rem;
+    text-decoration: none;
+
+    font-family: 'Poppins-Regular';
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFF7EF;
+}
+
+.imageText {
+    @include centerComponents();
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.imageText img {
+    height: 4vh;
+}
+
+.dropdownMenu {
+    display: inline-block;
+}
+
+
+// Post Block
+.postScrollArea {
+    @include centerComponents();
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.postBlock {
+    width: 60vw;
+    height: 85vh;
+
+    margin: 2rem 0 1rem 0;
+    border-radius: 0.5rem;
+    background-color: #3C3835;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    margin: 1rem;
+}
+
+.profilePic {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+    background-color: #FFF7EF;
+}
+
+.usernameTime {
+    @include centerComponents();
+    align-items: start;
+    flex-direction: column;
+    
+}
+
+.username {
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: #FFF7EF;
+
+    margin: 0;
+}
+
+.timePosted {
+    font-family: 'Poppins-Regular';
+    font-size: 12px;
+    font-weight: 100;
+    text-align: start;
+    color: #FFF7EF;
+
+    margin: 0;
+}
+
+.post{
+    width: 100%;
+    height: 60vh;
+
+    background-color: #E49F43;
+}
+
+.postInfo {
+    @include centerComponents();
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    margin: 1rem;
+}
+
+.likeComment {
+    @include centerComponents();
+    gap: 0.5rem;
+}
+
+.like {
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 50%;
+    background-color: #FFF7EF;
+}
+
+.comment {
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 50%;
+    background-color: #FFF7EF;
+}
+
+.postCaption {
+    font-family: 'Poppins-Regular';
+        font-size: 16px;
+        font-weight: 500;
+        text-align: start;
+        color: #FFF7EF;
+}
+
+// Add Post Button
+.addPost {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.addPost button {
+    all: unset;
+    
+    font-family: 'Poppins-Bold';
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFF7EF;
+
+    padding: 0.5rem 1.4rem;
+    border-radius: 100%;
+    background-color: #3C3835;
+}
