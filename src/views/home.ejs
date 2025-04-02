@@ -1,2 +1,128 @@
-<h1>Logged in.</h1>
-<h2>Hi <%= name %></h2>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Woofles</title>
+        <link rel="stylesheet" href="/css/home.css"> <!-- /css/home.css (for .ejs) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="headerBar">
+            <div class="logoContainer">
+                <img src="/assets/images/logoTemp.png" alt="Woofles Logo" id="logo">
+                <!-- /assets/images/logoTemp.png (for .ejs) -->
+            </div>
+
+            <div class="dropdownMenu">
+                <button class="dropdown" onclick="toggleMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="menu">
+                    <!-- Profile -->
+                    <div class="imageText">
+                        <img src="/assets/images/profileImage.png" alt="Profile">
+
+                        <a href="">Profile</a>
+                    </div>
+
+                    <!-- Friends -->
+                    <div class="imageText">
+                        <img src="/assets/images/friendsImage.png" alt="Friends">
+
+                        <a href="">Friends</a>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="imageText">
+                        <img src="/assets/images/settingsImage.png" alt="Settings">
+
+                        <a href="">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="postScrollArea">
+            <!-- A typical post layout -->
+            <div class="postBlock">
+                <div class="userInfo">
+                    <div class="profilePic">
+                        <!-- User Profile Picture -->
+                    </div>
+
+                    <div class="usernameTime">
+                        <p class="username">Name Placeholder</p>
+                        <p class="timePosted">Time Placeholder</p>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <!-- The Post -->
+                </div>
+
+                <div class="postInfo">
+                    <div class="likeComment">
+                        <!-- Like and Comment Image -->
+                        <div class="like"></div>
+                        <div class="comment"></div>
+                    </div>
+
+                    <div class="postDescription">
+                        <p class="postCaption">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque convallis, ante ac tristique semper, nisl leo tristique arcu, at malesuada ipsum nisl
+                            nec velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postBlock">
+                <div class="userInfo">
+                    <div class="profilePic">
+                        <!-- User Profile Picture -->
+                    </div>
+
+                    <div class="usernameTime">
+                        <p class="username">Name Placeholder</p>
+                        <p class="timePosted">Time Placeholder</p>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <!-- The Post -->
+                </div>
+
+                <div class="postInfo">
+                    <div class="likeComment">
+                        <!-- Like and Comment Image -->
+                        <div class="like"></div>
+                        <div class="comment"></div>
+                    </div>
+
+                    <div class="postDescription">
+                        <p class="postCaption">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque convallis, ante ac tristique semper, nisl leo tristique arcu, at malesuada ipsum nisl
+                            nec velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="addPost">
+            <button>+</button>
+        </div>
+
+        <script src="/js/headerBar.js"></script>
+        <script src="/js/dropdown.js"></script>
+    </body>
+
+</html>

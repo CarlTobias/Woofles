@@ -13,7 +13,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 
 const User = require(path.join(__dirname, 'models', 'user'));
-const userRoute = require(path.join(__dirname, 'routes', 'userRoute'));
+const userRoute = require(path.join(__dirname, 'routes', 'auth'));
 
 
 
