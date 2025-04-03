@@ -217,28 +217,155 @@ a {
 
 .postCaption {
     font-family: 'Poppins-Regular';
-        font-size: 16px;
-        font-weight: 500;
-        text-align: start;
-        color: #FFF7EF;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+    color: #FFF7EF;
 }
 
 // Add Post Button
 .addPost {
     position: fixed;
-    right: 0.5rem;
-    bottom: 0.5rem;
+    bottom: 1rem;
+    right: 1rem;
+
+    button {
+        @include centerComponents();
+        width: 50px;
+        height: 50px;
+        
+        border: none;
+        border-radius: 50%;
+        background: #534F4C;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+
+        &:hover {
+            background: #3C3835;
+        }
+    }
 }
 
-.addPost button {
-    all: unset;
-    
-    font-family: 'Poppins-Bold';
-    font-size: 32px;
-    font-weight: 400;
-    color: #FFF7EF;
+.postPopup {
+    display: none;
+    width: 100%;
+    height: 100%;
 
-    padding: 0.5rem 1.4rem;
-    border-radius: 100%;
-    background-color: #3C3835;
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    box-sizing: border-box;
+    
+
+    .popup-content {
+        @include centerComponents();
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 30vw;
+
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background: #3C3835;
+
+        text-align: center;
+
+        .popupHeader {
+            @include centerComponents();
+            flex-direction: row;
+            justify-content: space-between;
+
+            width: 100%;
+        }
+
+        .popupText {
+            margin: 0.5rem 0 0.5rem 0;
+
+            font-family: 'Poppins-Regular';
+            font-size: 24px;
+            text-align: start;
+            color: #FFF7EF;
+        }
+
+        .close {
+            padding: 0.4rem 0.85rem;
+            background-color: #534F4C;
+            border-radius: 50%;
+
+            font-family: 'Poppins-Regular';
+            font-size: 16px;
+            text-align: start;
+            color: #FFF7EF;
+
+            cursor: pointer;
+        }
+
+        #postForm {
+            @include centerComponents();
+            flex-direction: column;
+            gap: 1rem;
+
+        }
+
+        .postFromGroup1 {
+            @include centerComponents();
+            width: 100%;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        textarea {
+            all: unset;
+            background-color: #534F4C;
+
+            font-family: 'Poppins-Regular';
+            text-align: start;
+            color: #FFF7EF;
+
+            width: 100%;
+            height: 7vh;
+            margin: 0;
+            padding: 0.5rem;
+
+            resize: none;
+            white-space: normal;
+        }
+
+        .postFromGroup2 {
+            @include centerComponents();
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        input[type="file"] {
+            all: unset;
+
+            width: 100%;
+
+            font-family: 'Poppins-Regular';
+            color: #FFF7EF;
+        }
+
+        button {
+            padding: 0.5rem 1.2rem;
+            
+            border: none;
+            border-radius: 0.3rem;
+            background: #E49F43;
+
+            font-family: 'Poppins-Regular';
+            font-size: 16px;
+            color: #FFF7EF;
+            
+            cursor: pointer;
+
+            &:hover {
+                background: #835A37;
+            }
+        }
+    }
 }

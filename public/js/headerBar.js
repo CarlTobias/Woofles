@@ -8,10 +8,10 @@ window.addEventListener("scroll", () => {
     let currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
-        // Scrolling down → Hide header
-        header.style.top = "-8vh"; // Adjust based on header height
+        // Scrolling down hides header
+        header.style.top = "-8vh";
     } else {
-        // Scrolling up → Show header with smooth transition
+        // Scrolling up shows header with smooth transition
         header.style.top = "0";
     }
 
