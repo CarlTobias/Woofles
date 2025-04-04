@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon src/js/server.js",
+    "dev": "nodemon src/js/server.js",
     "watch": "sass --watch src/scss:public/css"
   },
   "repository": {

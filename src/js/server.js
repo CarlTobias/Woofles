@@ -8,23 +8,19 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+
 const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
 const mongoose = require('mongoose');
+const User = require(path.join(__dirname, 'models', 'user'));
+const userAuth = require(path.join(__dirname, 'routes', 'auth'));
 
-const cloudinary = require('cloudinary').v2;
-const fileUpload = require('express-fileupload');
+
+const postRoute = require(path.join(__dirname, 'routes', 'uploadPosts'));
+
 
 app.use(express.static(path.join(__dirname, '..', '..', 'public')));
-
-const User = require(path.join(__dirname, 'models', 'user'));
-const userRoute = require(path.join(__dirname, 'routes', 'auth'));
-const postRoute = require(path.join(__dirname, 'routes', 'posts'));
-
-const Post = require('./models/post');
-
-
 
 
 
@@ -44,7 +40,6 @@ mongoose.connect(process.env.MONGO_URL, {
 
 
 app.use(express.urlencoded({ extended: false }));
-app.use(fileUpload());
 app.use(flash());
 app.use(session({
     secret: process.env.SESSION_SECRET, 
@@ -58,25 +53,16 @@ app.set('view engine', 'ejs');
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(fileUpload());
-app.use('/', userRoute);
-app.use('/posts', postRoute);
+
+app.use('/', userAuth);
+
+app.use('/', postRoute);
 
 
-app.get('/', async (req, res) => {
-    res.render('home', { posts }); // Passing 'posts' to home.ejs
-    
-    try {
-        const posts = await Post.find(); // Fetch posts from MongoDB
-        console.log("Posts variable before rendering:", posts);
 
-        console.log("Posts fetched:", posts); // Debugging
 
-    } catch (error) {
-        console.error('Error fetching posts:', error);
-        res.status(500).send("Error loading posts");
-    }
-});
+
+
 
 
 

@@ -50,8 +50,6 @@
 
         <div class="postScrollArea">
             <!-- A typical post layout -->
-            <% if (posts && posts.length> 0) { %>
-                <% posts.forEach(post => { %>
             <div class="postBlock">
                 <div class="userInfo">
                     <div class="profilePic">
@@ -59,24 +57,14 @@
                     </div>
                 
                     <div class="usernameTime">
-                        <p class="username">
-                            <%= post.username %>
-                        </p>
-                        <p class="timePosted">
-                            <%= post.createdAt.toLocaleString() %>
-                        </p>
+                        <p class="username"></p>
+                        <p class="timePosted"></p>
                     </div>
                 </div>
             
                 <div class="post">
                     <!-- The Post -->
-                    <% if (post.media) { %>
-                        <% if (post.media.includes(".mp4") || post.media.includes(".webm")) { %>
-                            <video controls src="<%= post.media %>"></video>
-                        <% } else { %>
-                                <img src="<%= post.media %>" alt="Post">
-                        <% } %>
-                    <% } %>
+                    
                 </div>
             
                 <div class="postInfo">
@@ -88,15 +76,11 @@
                 
                     <div class="postDescription">
                         <p class="postCaption">
-                            <%= post.caption %>
+                            Hello! I wionefoinae wjnn winda jwnanjsa.
                         </p>
                     </div>
                 </div>
             </div>
-            <% }); %>
-        <% } else { %>
-                <p>No posts found.</p>
-        <% } %>
         </div>
 
         <div class="addPost">
@@ -110,14 +94,14 @@
                     <p class="popupText">Create a Post</p>
                     <span class="close">X</span>
                 </div>
-                <form id="postForm" action="/posts/create-post" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="username" value="<%= user.username %>">
+                <form id="postForm" action="/posts/create" method="POST" enctype="multipart/form-data">
+                    <!-- <input type="hidden" name="username" value="user.username (put the ejs tag)"> -->
                     <div class="postFromGroup1">
                         <textarea name="caption" placeholder="Write a caption..."></textarea>
                     </div>
 
                     <div class="postFromGroup2">
-                        <input type="file" name="file" accept="image/*, video/*">
+                        <input type="file" name="media" accept="image/*, video/*">
                         <button type="submit">Post</button>
                     </div>
                 </form>
